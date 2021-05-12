@@ -18,7 +18,7 @@ public class Teleport : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) 
     {
-        // Challenge 2: TeleportPlayer();
+        TeleportPlayer();
         // Challenge 3: DeactivateObject();
         // Challenge 4: IlluminateArea();
         // Challenge 5: StartCoroutine ("BlinkWorldLight");
@@ -27,7 +27,7 @@ public class Teleport : MonoBehaviour
 
     private void TeleportPlayer()
     {
-        // code goes here
+        player.transform.position = teleportTarget.position;
     }
 
     private void DeactivateObject()

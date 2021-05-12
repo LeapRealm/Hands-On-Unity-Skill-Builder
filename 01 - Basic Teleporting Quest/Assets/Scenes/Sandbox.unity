@@ -848,7 +848,15 @@ PrefabInstance:
       value: Elements (1)
       objectReference: {fileID: 0}
     - target: {fileID: 8344315865710370890, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344315865710370890, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344315865710370893, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -863,11 +871,11 @@ PrefabInstance:
     - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 819822853}
     - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: areaLight
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 508301946}
     - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -875,11 +883,11 @@ PrefabInstance:
     - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: mainWorldLight
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 764441148}
     - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: teleportTarget
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1402688415}
     - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: teleportTargetsArray.Array.size
       value: 2
@@ -973,6 +981,10 @@ PrefabInstance:
       value: TeleportA (2)
       objectReference: {fileID: 0}
     - target: {fileID: 8344315865710370890, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344315865710370890, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: m_Lightmapping
       value: 1
       objectReference: {fileID: 0}
@@ -987,6 +999,10 @@ PrefabInstance:
     - target: {fileID: 8344315865710370893, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: m_Name
       value: Area Light (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344315865710370893, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
@@ -2129,6 +2145,11 @@ Transform:
   m_Father: {fileID: 1891659522}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &508301946 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 8344315865710370890, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+  m_PrefabInstance: {fileID: 220644671}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &528418010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2460,7 +2481,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764441146}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -4992,7 +5013,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777563166}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -5220,7 +5241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1891659522
 Transform:
   m_ObjectHideFlags: 0

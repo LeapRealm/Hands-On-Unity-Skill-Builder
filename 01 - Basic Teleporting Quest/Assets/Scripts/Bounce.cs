@@ -6,7 +6,7 @@ using UnityEngine;
 public class Bounce : MonoBehaviour
 {
     [SerializeField] private float jumpForce = 1000f;
-    
+
     private void OnTriggerEnter(Collider other)
     {
         JumpyJumpy(other);
