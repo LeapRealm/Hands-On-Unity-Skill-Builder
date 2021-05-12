@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 // GameDev.tv Challenge Club. Got questions or want to share your nifty solution?
@@ -22,9 +23,8 @@ public class Teleport : MonoBehaviour
     private void OnTriggerEnter(Collider other) 
     {
         TeleportPlayer();
-        DeactivateObject();
         IlluminateArea();
-        // Challenge 5: StartCoroutine ("BlinkWorldLight");
+        StartCoroutine(BlinkWorldLight());
         // Challenge 6: TeleportPlayerRandom();
     }
 
@@ -44,10 +44,14 @@ public class Teleport : MonoBehaviour
         nextPlatform.GetComponent<MeshRenderer>().material = teleporterEmissionMaterial;
     }
 
-    // private IEnumerator BlinkWorldLight()
-    // {
-            // code goes here
-    // }
+    private IEnumerator BlinkWorldLight()
+    {
+        mainWorldLight.enabled = true;
+        yield return new WaitForSeconds(1.0f);
+        mainWorldLight.enabled = false;
+        
+        DeactivateObject();
+    }
 
     private void TeleportPlayerRandom()
     {
