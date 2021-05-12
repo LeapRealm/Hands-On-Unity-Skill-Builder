@@ -9,6 +9,9 @@ public class Teleport : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private Light areaLight;
     [SerializeField] private Light mainWorldLight;
+    [SerializeField] private GameObject nextPlatform;
+    [SerializeField] private Material teleporterNormalMaterial;
+    [SerializeField] private Material teleporterEmissionMaterial;
 
     private void Start() 
     {
@@ -20,7 +23,7 @@ public class Teleport : MonoBehaviour
     {
         TeleportPlayer();
         DeactivateObject();
-        // Challenge 4: IlluminateArea();
+        IlluminateArea();
         // Challenge 5: StartCoroutine ("BlinkWorldLight");
         // Challenge 6: TeleportPlayerRandom();
     }
@@ -37,7 +40,8 @@ public class Teleport : MonoBehaviour
 
     private void IlluminateArea()
     {
-       // code goes here 
+        GetComponent<MeshRenderer>().material = teleporterNormalMaterial;
+        nextPlatform.GetComponent<MeshRenderer>().material = teleporterEmissionMaterial;
     }
 
     // private IEnumerator BlinkWorldLight()

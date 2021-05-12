@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1818555 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8344315865539525019, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+  m_PrefabInstance: {fileID: 220644671}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &10169106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -796,9 +801,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+      propertyPath: nextPlatform
+      value: 
+      objectReference: {fileID: 1818555}
+    - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: mainWorldLight
       value: 
       objectReference: {fileID: 1777563167}
+    - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+      propertyPath: teleporterNormalMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 04dbb2c4a1345c14b8b3aca37888348e, type: 2}
+    - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+      propertyPath: teleporterEmissionMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: db53afd9932b93547a15b539173e9831, type: 2}
     - target: {fileID: 8344315865334038246, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -847,6 +864,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Elements (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8344315865539525017, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344315865539525017, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: db53afd9932b93547a15b539173e9831, type: 2}
+    - target: {fileID: 8344315865539525017, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 04dbb2c4a1345c14b8b3aca37888348e, type: 2}
     - target: {fileID: 8344315865710370890, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -881,6 +910,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+      propertyPath: nextPlatform
+      value: 
+      objectReference: {fileID: 1607640275}
+    - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: mainWorldLight
       value: 
       objectReference: {fileID: 764441148}
@@ -888,6 +921,14 @@ PrefabInstance:
       propertyPath: teleportTarget
       value: 
       objectReference: {fileID: 1402688415}
+    - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+      propertyPath: teleporterNormalMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 04dbb2c4a1345c14b8b3aca37888348e, type: 2}
+    - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+      propertyPath: teleporterEmissionMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: db53afd9932b93547a15b539173e9831, type: 2}
     - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: teleportTargetsArray.Array.size
       value: 2
@@ -4562,6 +4603,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 408f59ce148892a4480e8987e8a029b1, type: 3}
+--- !u!1 &1607640275 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8344315865539525019, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+  m_PrefabInstance: {fileID: 163848800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1627345064
 GameObject:
   m_ObjectHideFlags: 0
