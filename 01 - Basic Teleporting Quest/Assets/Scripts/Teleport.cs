@@ -19,7 +19,7 @@ public class Teleport : MonoBehaviour
     private void OnTriggerEnter(Collider other) 
     {
         TeleportPlayer();
-        // Challenge 3: DeactivateObject();
+        DeactivateObject();
         // Challenge 4: IlluminateArea();
         // Challenge 5: StartCoroutine ("BlinkWorldLight");
         // Challenge 6: TeleportPlayerRandom();
@@ -32,7 +32,7 @@ public class Teleport : MonoBehaviour
 
     private void DeactivateObject()
     {
-       // code goes here 
+        gameObject.SetActive(false);
     }
 
     private void IlluminateArea()
