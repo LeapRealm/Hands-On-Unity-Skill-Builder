@@ -1,49 +1,40 @@
 using System.Collections;
 using UnityEngine;
 
-// GameDev.tv Challenge Club. Got questions or want to share your nifty solution?
-// Head over to - http://community.gamedev.tv
-
 public class Teleport : MonoBehaviour
 {
     [SerializeField] private Transform teleportTarget;
     [SerializeField] private GameObject player;
-    [SerializeField] private Light areaLight;
     [SerializeField] private Light mainWorldLight;
     [SerializeField] private GameObject nextPlatform;
     [SerializeField] private Material teleporterNormalMaterial;
     [SerializeField] private Material teleporterEmissionMaterial;
-
-    private void Start() 
-    {
-        // CHALLENGE TIP: Make sure all relevant lights are turned off until you need them on
-        // because, you know, that would look cool.
-    }
+    [SerializeField] private Transform[] nextTransforms;
 
     private void OnTriggerEnter(Collider other) 
     {
-        TeleportPlayer();
+        // TeleportPlayer();
+        TeleportPlayerRandom();
         IlluminateArea();
         StartCoroutine(BlinkWorldLight());
-        // Challenge 6: TeleportPlayerRandom();
     }
 
     private void TeleportPlayer()
     {
         player.transform.position = teleportTarget.position;
     }
-
-    private void DeactivateObject()
+    
+    private void TeleportPlayerRandom()
     {
-        gameObject.SetActive(false);
+        player.transform.position = nextTransforms[Random.Range(0, nextTransforms.Length)].position;
     }
-
+    
     private void IlluminateArea()
     {
         GetComponent<MeshRenderer>().material = teleporterNormalMaterial;
         nextPlatform.GetComponent<MeshRenderer>().material = teleporterEmissionMaterial;
     }
-
+    
     private IEnumerator BlinkWorldLight()
     {
         mainWorldLight.enabled = true;
@@ -52,9 +43,9 @@ public class Teleport : MonoBehaviour
         
         DeactivateObject();
     }
-
-    private void TeleportPlayerRandom()
+    
+    private void DeactivateObject()
     {
-        // code goes here... or you could modify one of your other methods to do the job.
+        gameObject.SetActive(false);
     }
 }

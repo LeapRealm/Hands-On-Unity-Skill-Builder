@@ -2,26 +2,24 @@
 
 public class FirstPersonLook : MonoBehaviour
 {
-    [SerializeField]
-    Transform character;
-    Vector2 currentMouseLook;
-    Vector2 appliedMouseDelta;
+    [SerializeField] private Transform character;
+    private Vector2 currentMouseLook;
+    private Vector2 appliedMouseDelta;
     public float sensitivity = 1;
     public float smoothing = 2;
-
-
-    void Reset()
+    
+    private void Reset()
     {
         character = GetComponentInParent<FirstPersonMovement>().transform;
     }
 
-    void Start()
+    private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-    void Update()
+    private void Update()
     {
         // Get smooth mouse look.
         Vector2 smoothMouseDelta = Vector2.Scale(new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y")), Vector2.one * sensitivity * smoothing);

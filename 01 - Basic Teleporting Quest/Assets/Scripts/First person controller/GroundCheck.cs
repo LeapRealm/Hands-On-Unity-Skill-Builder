@@ -5,13 +5,12 @@ public class GroundCheck : MonoBehaviour
     public float maxGroundDistance = .3f;
     public bool isGrounded;
 
-
-    void LateUpdate()
+    private void LateUpdate()
     {
         isGrounded = Physics.Raycast(transform.position, Vector3.down, maxGroundDistance);
     }
 
-    void OnDrawGizmosSelected()
+    private void OnDrawGizmosSelected()
     {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, maxGroundDistance))
@@ -19,8 +18,7 @@ public class GroundCheck : MonoBehaviour
         else
             Debug.DrawLine(transform.position, transform.position + Vector3.down * maxGroundDistance, Color.red);
     }
-
-
+    
     public static GroundCheck Create(Transform parent)
     {
         GameObject newGroundCheck = new GameObject("Ground check");
