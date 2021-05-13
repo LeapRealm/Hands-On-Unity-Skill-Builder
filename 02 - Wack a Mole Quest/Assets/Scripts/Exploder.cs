@@ -9,6 +9,10 @@ public class Exploder : MonoBehaviour
         print("Aww, you got me");
         ParticleSystem catchParticle = Instantiate(catchParticleSource, GetComponentsInChildren<Transform>()[1].position, Quaternion.identity);
         catchParticle.Play();
+
+        Mover mover = other.GetComponent<Mover>();
+        if (mover != null)
+            mover.StartTimeScaleCoroutine();
         
         Destroy(gameObject);
     }
