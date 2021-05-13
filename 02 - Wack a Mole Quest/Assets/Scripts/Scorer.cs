@@ -3,13 +3,14 @@
 public class Scorer : MonoBehaviour
 {
     [SerializeField] private ParticleSystem celebration;
-    private bool hasChildren = true;
+    private bool isPlayed = false;
 
     private void Update()
     {
-        if (transform.childCount == 0)
+        if (!isPlayed && transform.childCount == 0)
         {
             celebration.Play();
+            isPlayed = true;
         }
     }
 }
