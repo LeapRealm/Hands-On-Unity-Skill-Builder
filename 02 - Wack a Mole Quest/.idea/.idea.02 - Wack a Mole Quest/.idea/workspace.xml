@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0527d4f7-4d83-4bef-8aab-8b5c1e69efb6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/CatchParticle.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/CatchParticle.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.02 - Wack a Mole Quest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.02 - Wack a Mole Quest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TheEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TheEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Exploder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Exploder.cs" afterDir="false" />
-    </list>
+    <list default="true" id="0527d4f7-4d83-4bef-8aab-8b5c1e69efb6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620870119206</updated>
-      <workItem from="1620870126422" duration="8817000" />
+      <workItem from="1620870126422" duration="9512000" />
     </task>
     <servers />
   </component>
