@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Scorer : MonoBehaviour
 {
@@ -9,8 +11,15 @@ public class Scorer : MonoBehaviour
     {
         if (!isPlayed && transform.childCount == 0)
         {
-            celebration.Play();
             isPlayed = true;
+            celebration.Play();
+            StartCoroutine(RestartScene());
         }
+    }
+
+    private IEnumerator RestartScene()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
