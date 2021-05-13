@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Scorer : MonoBehaviour
 {
-    [SerializeField] ParticleSystem celebration;
-    bool hasChildren = true;
+    [SerializeField] private ParticleSystem celebration;
+    private bool hasChildren = true;
 
-    void Update()
+    private void Update()
     {
         if (transform.childCount == 0)
         {

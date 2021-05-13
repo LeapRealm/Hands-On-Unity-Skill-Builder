@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 10f;
+    [SerializeField] private float moveSpeed = 10f;
 
-    void Update()
+    private void Update()
     {
         MoveHero();
     }
@@ -17,5 +15,4 @@ public class Mover : MonoBehaviour
         float yValue = moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
         transform.Translate(xValue, 0, yValue);
     }
-
 }
