@@ -618,6 +618,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c829a531181d3ad4f87f590f8fa486eb, type: 2}
+    - target: {fileID: 340906651182337415, guid: a67c5993318da11429ff830546fbd543, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 340906652704881928, guid: a67c5993318da11429ff830546fbd543, type: 3}
       propertyPath: m_Name
       value: EnemyNew (1)
@@ -873,15 +877,19 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c829a531181d3ad4f87f590f8fa486eb, type: 2}
     - target: {fileID: 340906651182337415, guid: a67c5993318da11429ff830546fbd543, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.33
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 340906651182337415, guid: a67c5993318da11429ff830546fbd543, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.46
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 340906652704881928, guid: a67c5993318da11429ff830546fbd543, type: 3}
       propertyPath: m_Name
       value: EnemyNew (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 340906652704881928, guid: a67c5993318da11429ff830546fbd543, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 340906652704881932, guid: a67c5993318da11429ff830546fbd543, type: 3}
       propertyPath: m_RootOrder
@@ -3022,6 +3030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyNew (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 340906652704881928, guid: a67c5993318da11429ff830546fbd543, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 340906652704881932, guid: a67c5993318da11429ff830546fbd543, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -4783,6 +4795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyNew (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 340906652704881928, guid: a67c5993318da11429ff830546fbd543, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 340906652704881932, guid: a67c5993318da11429ff830546fbd543, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -5004,6 +5020,10 @@ PrefabInstance:
     - target: {fileID: 340906652704881928, guid: a67c5993318da11429ff830546fbd543, type: 3}
       propertyPath: m_Name
       value: EnemyNew (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 340906652704881928, guid: a67c5993318da11429ff830546fbd543, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 340906652704881932, guid: a67c5993318da11429ff830546fbd543, type: 3}
       propertyPath: m_RootOrder
