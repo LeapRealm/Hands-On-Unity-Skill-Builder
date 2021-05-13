@@ -1,3 +1,4 @@
+using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,7 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        
+        elapsedTime += Time.deltaTime;
+        timerText.text = Mathf.RoundToInt(elapsedTime).ToString(CultureInfo.InvariantCulture);
     }
 }
