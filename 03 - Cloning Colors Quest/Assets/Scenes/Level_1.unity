@@ -477,6 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e055227fdd4bb94f90f4aa67ceaeff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockColor: 0
 --- !u!212 &402648193
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2557,7 +2558,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 646319724904498132, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 646319724904498132, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2613,10 +2614,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 646319724904498134, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
       propertyPath: m_Name
-      value: PlayerBlock (2)
+      value: PlayerBlock (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2039809777333422715, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
       propertyPath: isBlue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2039809777333422715, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
+      propertyPath: blockColor
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5745,6 +5750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e055227fdd4bb94f90f4aa67ceaeff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockColor: 0
 --- !u!4 &1744052871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 82358166877800182, guid: 63ec7df1189b1d445aabf9b057f51b91, type: 3}
@@ -5866,7 +5872,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 646319724904498132, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 646319724904498132, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5922,11 +5928,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 646319724904498134, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
       propertyPath: m_Name
-      value: PlayerBlock (1)
+      value: PlayerBlock (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2039809777333422715, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
       propertyPath: isYellow
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2039809777333422715, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
+      propertyPath: blockColor
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
@@ -6000,7 +6010,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 646319724904498132, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 646319724904498132, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6056,7 +6066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 646319724904498134, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
       propertyPath: m_Name
-      value: PlayerBlock
+      value: PlayerBlock (0)
       objectReference: {fileID: 0}
     - target: {fileID: 646319724904498138, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
       propertyPath: isActiveBool
