@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 
+public enum BlockColor
+{
+    Red,
+    Yellow,
+    Blue
+}
+
 public class ColorChanger : MonoBehaviour
 {
-    private enum BlockColor
-    {
-        Red,
-        Yellow,
-        Blue
-    }
-    
     private SpriteRenderer mySpriteRenderer;
-    [SerializeField] private BlockColor blockColor;
+    public BlockColor blockColor;
 
     private void Awake()
     {
