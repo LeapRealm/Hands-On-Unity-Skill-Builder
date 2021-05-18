@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1626900650069454263}
   - component: {fileID: 5474496776418543824}
   - component: {fileID: 1739699321}
+  - component: {fileID: 3568464451883124397}
   m_Layer: 0
   m_Name: Gem
   m_TagString: Gem
@@ -44,6 +45,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -96,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e055227fdd4bb94f90f4aa67ceaeff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockColor: 0
 --- !u!61 &1739699321
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122,3 +125,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.6}
   m_EdgeRadius: 0
+--- !u!114 &3568464451883124397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626900650069454262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15219c5bb6e8ef4e981adb0500d1d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

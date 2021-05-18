@@ -4,7 +4,6 @@ public class ColorChanger : MonoBehaviour
 {
     private enum BlockColor
     {
-        None,
         Red,
         Yellow,
         Blue
