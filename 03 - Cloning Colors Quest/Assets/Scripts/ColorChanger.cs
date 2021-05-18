@@ -10,7 +10,17 @@ public enum BlockColor
 public class ColorChanger : MonoBehaviour
 {
     private SpriteRenderer mySpriteRenderer;
-    public BlockColor blockColor;
+
+    [SerializeField] private BlockColor _blockColor;
+    public BlockColor blockColor
+    {
+        get => _blockColor;
+        set
+        {
+            _blockColor = value;
+            ChangeBlockColor();
+        }
+    }
 
     private void Awake()
     {
@@ -18,6 +28,11 @@ public class ColorChanger : MonoBehaviour
     }
 
     private void Start()
+    {
+        ChangeBlockColor();
+    }
+
+    private void ChangeBlockColor()
     {
         switch (blockColor)
         {

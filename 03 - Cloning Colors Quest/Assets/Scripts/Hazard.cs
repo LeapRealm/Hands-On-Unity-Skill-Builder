@@ -3,25 +3,34 @@
 public class Hazard : MonoBehaviour
 {
     private GameHandler gameHandler;
+    private ColorChanger colorChanger;
 
     private void Start()
     {
         gameHandler = FindObjectOfType<GameHandler>();
+        colorChanger = GetComponent<ColorChanger>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Block"))
+        if (other.gameObject.CompareTag("Block"))
         {
-            if (collision.gameObject.GetComponent<BlockMovement>().isActiveBool)
+            ColorChanger otherColorChanger = other.GetComponent<ColorChanger>();
+            if (otherColorChanger == null)
+                return;
+            
+            if (otherColorChanger.blockColor == colorChanger.blockColor)
+                return;
+            
+            if (other.gameObject.GetComponent<BlockMovement>().isActiveBool)
             {
-                Destroy(collision.gameObject);
+                Destroy(other.gameObject);
                 gameHandler.AllPlayerBlocksArrayUpdate();
                 gameHandler.DestroyedBlockUpdate();
             }
             else
             {
-                Destroy(collision.gameObject);
+                Destroy(other.gameObject);
             }
         }
     }

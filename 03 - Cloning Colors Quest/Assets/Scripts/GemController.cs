@@ -2,20 +2,19 @@ using UnityEngine;
 
 public class GemController : MonoBehaviour
 {
-    private SpriteRenderer gemSpriteRenderer;
+    private ColorChanger gemColorChanger;
 
     private void Start()
     {
-        gemSpriteRenderer = GetComponent<SpriteRenderer>();
+        gemColorChanger = GetComponent<ColorChanger>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        SpriteRenderer otherSpriteRenderer = other.GetComponent<SpriteRenderer>();
-        
-        if (otherSpriteRenderer == null)
+        ColorChanger otherColorChanger = other.GetComponent<ColorChanger>();
+        if (otherColorChanger == null)
             return;
 
-        otherSpriteRenderer.color = gemSpriteRenderer.color;
+        otherColorChanger.blockColor = gemColorChanger.blockColor;
     }
 }
