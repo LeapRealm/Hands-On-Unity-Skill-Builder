@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameHandler : MonoBehaviour
 {
-    [SerializeField] private GameObject youWinText = null;
+    [SerializeField] private GameObject youWinText;
     [SerializeField] private List<PlayerMovement> allPlayerCubes = new List<PlayerMovement>();
 
     private void Start()
@@ -19,6 +19,7 @@ public class GameHandler : MonoBehaviour
 
     private void CheckIfLevelComplete()
     {
-        // Challenge 5:  
+        if (allPlayerCubes.Count == 0)
+            youWinText.SetActive(true);
     }
 }
