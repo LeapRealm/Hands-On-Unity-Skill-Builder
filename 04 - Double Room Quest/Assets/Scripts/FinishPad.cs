@@ -2,6 +2,7 @@
 
 public class FinishPad : MonoBehaviour
 {
+    [SerializeField] private GameObject goalParticlePrefab;
     private GameHandler gameHandler;
 
     private void Start()
@@ -15,7 +16,7 @@ public class FinishPad : MonoBehaviour
         {
             gameHandler.RemovePlayerCubeFromList(other.gameObject.GetComponent<PlayerMovement>());
             Destroy(other.gameObject);
-            //Challenge 4:  
+            Instantiate(goalParticlePrefab, transform.position, Quaternion.identity);
         }
     }
 }

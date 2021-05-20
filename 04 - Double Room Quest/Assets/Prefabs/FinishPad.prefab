@@ -53,6 +53,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -108,3 +109,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 051bad9f03f6f354b849030fdd10aab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goalParticlePrefab: {fileID: 120410, guid: 6636b3078b0905e489f698a11b7a6b6b, type: 3}
