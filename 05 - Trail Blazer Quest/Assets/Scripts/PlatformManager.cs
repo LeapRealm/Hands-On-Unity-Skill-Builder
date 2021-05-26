@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlatformManager : MonoBehaviour
 {
@@ -15,7 +17,13 @@ public class PlatformManager : MonoBehaviour
     }
 
     private static PlatformManager _instance;
-
+    
+    [SerializeField] private TextMeshProUGUI distanceText;
+    [SerializeField] private TextMeshProUGUI coinText;
+    public PlayerMovement playerMovement;
+    private float currentDistance = 0;
+    private int currentCoinScore = 0;
+    
     [SerializeField] private List<PlatformController> platforms;
     [SerializeField] private List<GameObject> platformPrefabs;
     private int lastPlatformIndex;
@@ -26,6 +34,12 @@ public class PlatformManager : MonoBehaviour
             Destroy(gameObject);
         
         lastPlatformIndex = FindObjectsOfType<PlatformController>().Length - 1;
+    }
+
+    private void Update()
+    {
+        currentDistance = Mathf.Abs(playerMovement.transform.position.x - 0.37f);
+        distanceText.text = $"distance : {Mathf.Round(currentDistance)}m";
     }
 
     public void SpawnPlatform()
@@ -39,5 +53,11 @@ public class PlatformManager : MonoBehaviour
         
         platforms.Add(newPlatformGameObject.GetComponent<PlatformController>());
         lastPlatformIndex++;
+    }
+
+    public void AddCoinScore()
+    {
+        currentCoinScore++;
+        coinText.text = $"coin : {currentCoinScore}";
     }
 }

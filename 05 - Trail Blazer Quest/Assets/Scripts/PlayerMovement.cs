@@ -4,16 +4,17 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private LayerMask groundLayers;
     [SerializeField] private float gravity = -30f;
-    [SerializeField] private float baseSpeed = 1f;
     [SerializeField] private float jumpHeight = 1f;
     [SerializeField] private float distanceCheck = 1f;
     [SerializeField] private float boostModifier = 1f;
     [SerializeField] private int numberOfJumps = 2;
     [SerializeField] private float horizontalSpeed;
+    [SerializeField] private GameObject projectilePrefab;
 
+    public float baseSpeed = 1f;
+    
     private CharacterController characterController;
     private Vector3 velocity;
-
     private bool isGrounded;
     private bool isBoosting;
     private int jumpCounter;
@@ -30,7 +31,10 @@ public class PlayerMovement : MonoBehaviour
         ProcessJump();
 
         characterController.Move(velocity * Time.deltaTime);
-    }
+
+        if (Input.GetButtonDown("Fire1"))
+            Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+}
 
     private void ProcessJump()
     {       
