@@ -34,8 +34,23 @@ public class GrapplingHook : MonoBehaviour
             {
                 joint.enabled = true;
                 joint.connectedBody = hit.collider.GetComponent<Rigidbody2D>();
-
-                //Challenge 3:
+                
+                // float colliderMinX = hit.collider.bounds.min.x;
+                // float colliderMaxX = hit.collider.bounds.max.x;
+                // float colliderMinY = hit.collider.bounds.min.y;
+                // float colliderMaxY = hit.collider.bounds.max.y;
+                //
+                // SpriteRenderer hitSpriteRenderer = hit.collider.GetComponent<SpriteRenderer>();
+                // float spriteMinX = hitSpriteRenderer.size.x / 2.0f * -1.0f;
+                // float spriteMaxX = hitSpriteRenderer.size.x / 2.0f;
+                // float spriteMinY = hitSpriteRenderer.size.y / 2.0f * -1.0f;
+                // float spriteMaxY = hitSpriteRenderer.size.y / 2.0f;
+                //
+                // float anchorX = MapRangeClamped(hit.point.x, colliderMinX, colliderMaxX, spriteMinX, spriteMaxX);
+                // float anchorY = MapRangeClamped(hit.point.y, colliderMinY, colliderMaxY, spriteMinY, spriteMaxY);
+                // joint.connectedAnchor = new Vector2(anchorX, anchorY);
+                
+                joint.connectedAnchor = hit.transform.InverseTransformPoint(hit.point);
 
                 joint.distance = Vector2.Distance(playerHand.transform.position, hit.point);
 
@@ -61,5 +76,11 @@ public class GrapplingHook : MonoBehaviour
     {
         joint.distance -= Time.deltaTime * grappleSpeed;
         joint.distance = Mathf.Max(0.5f, joint.distance);
+    }
+    
+    public float MapRangeClamped (float value, float fromA, float toB, float fromC, float toD)
+    {
+        value = Mathf.Clamp(value, fromA, toB);
+        return (value - fromA) / (toB - fromA) * (toD - fromC) + fromC;
     }
 }
