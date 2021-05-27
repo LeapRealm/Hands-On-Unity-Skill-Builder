@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class GrapplingHook : MonoBehaviour
 {
-    [SerializeField] private float distance = 10f;
+    [SerializeField] private float distance = 5f;
     [SerializeField] private LayerMask mask;
     [SerializeField] private LineRenderer line;
-    [SerializeField] private float grappleSpeed = 3f;
+    [SerializeField] private float grappleSpeed = 1.5f;
     [SerializeField] private GameObject playerHand;
 
     private DistanceJoint2D joint;
@@ -29,10 +29,16 @@ public class GrapplingHook : MonoBehaviour
             targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             targetPos.z = 0;
 
-            hit = Physics2D.Raycast(playerHand.transform.position, targetPos - playerHand.transform.position, distance, mask);
+            hit = Physics2D.Raycast(playerHand.transform.position, 
+                targetPos - playerHand.transform.position, distance, mask);
 
             if (hit.collider != null && hit.collider.gameObject.GetComponent<Rigidbody2D>() != null)
             {
+                if (hit.collider.GetComponent<MovingPlatformController>())
+                    grappleSpeed = 3f;
+                else
+                    grappleSpeed = 1.5f;
+
                 joint.enabled = true;
                 joint.connectedBody = hit.collider.GetComponent<Rigidbody2D>();
                 
