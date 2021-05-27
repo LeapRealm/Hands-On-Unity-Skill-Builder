@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class GrapplingHook : MonoBehaviour
 {
@@ -75,7 +76,13 @@ public class GrapplingHook : MonoBehaviour
     private void PullPlayer()
     {
         joint.distance -= Time.deltaTime * grappleSpeed;
-        joint.distance = Mathf.Max(0.5f, joint.distance);
+        joint.distance = Mathf.Max(0.3f, joint.distance);
+
+        if (Math.Abs(joint.distance - 0.3f) < 0.01f)
+        {
+            joint.enabled = false;
+            line.enabled = false;
+        }
     }
     
     public float MapRangeClamped (float value, float fromA, float toB, float fromC, float toD)
