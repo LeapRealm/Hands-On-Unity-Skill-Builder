@@ -12,6 +12,9 @@ public class GrapplingHook : MonoBehaviour
     private DistanceJoint2D joint;
     private Vector3 targetPos;
     private RaycastHit2D hit;
+    private bool canPull;
+    private Vector2 currentVelocity;
+    private Vector2 currentLineOnePos;
 
     private void Start()
     {
@@ -23,6 +26,7 @@ public class GrapplingHook : MonoBehaviour
     private void Update()
     {
         PullPlayer();
+        DrawLine();
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -58,12 +62,14 @@ public class GrapplingHook : MonoBehaviour
                 // joint.connectedAnchor = new Vector2(anchorX, anchorY);
                 
                 joint.connectedAnchor = hit.transform.InverseTransformPoint(hit.point);
-
                 joint.distance = Vector2.Distance(playerHand.transform.position, hit.point);
 
                 line.enabled = true;
                 line.SetPosition(0, playerHand.transform.position);
-                line.SetPosition(1, hit.point);
+                line.SetPosition(1, playerHand.transform.position);
+
+                canPull = false;
+                currentLineOnePos = playerHand.transform.position;
             }
         }
 
@@ -81,6 +87,9 @@ public class GrapplingHook : MonoBehaviour
 
     private void PullPlayer()
     {
+        if (!canPull)
+            return;
+        
         joint.distance -= Time.deltaTime * grappleSpeed;
         joint.distance = Mathf.Max(0.3f, joint.distance);
 
@@ -90,7 +99,19 @@ public class GrapplingHook : MonoBehaviour
             line.enabled = false;
         }
     }
-    
+
+    private void DrawLine()
+    {
+        if (canPull || hit.collider == null)
+            return;
+
+        currentLineOnePos = Vector2.SmoothDamp(currentLineOnePos, hit.point, ref currentVelocity, 0.1f);
+        line.SetPosition(1, currentLineOnePos);
+
+        if (Vector2.Distance(currentLineOnePos, hit.point) <= 0.01f)
+            canPull = true;
+    }
+
     public float MapRangeClamped (float value, float fromA, float toB, float fromC, float toD)
     {
         value = Mathf.Clamp(value, fromA, toB);
