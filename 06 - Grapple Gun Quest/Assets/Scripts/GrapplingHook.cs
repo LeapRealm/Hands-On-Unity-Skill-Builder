@@ -34,7 +34,7 @@ public class GrapplingHook : MonoBehaviour
             {
                 joint.enabled = true;
                 joint.connectedBody = hit.collider.GetComponent<Rigidbody2D>();
-                
+
                 //Challenge 3:
 
                 joint.distance = Vector2.Distance(playerHand.transform.position, hit.point);
@@ -59,6 +59,7 @@ public class GrapplingHook : MonoBehaviour
 
     private void PullPlayer()
     {
-        //Challenge 2:  
+        joint.distance -= Time.deltaTime * grappleSpeed;
+        joint.distance = Mathf.Max(0.5f, joint.distance);
     }
 }

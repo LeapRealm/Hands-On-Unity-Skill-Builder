@@ -763,7 +763,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.8079997, y: 1}
+    m_SensorSize: {x: 1.783105, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1014,7 +1014,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548310218}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2938912, y: -0.010502577, z: -10}
+  m_LocalPosition: {x: 0.25654984, y: -0.010705113, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812612950}
@@ -1692,7 +1692,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 55
   line: {fileID: 1682631639}
-  grappleSpeed: 3
+  grappleSpeed: 1.5
   playerHand: {fileID: 1637264630}
 --- !u!232 &998589711
 DistanceJoint2D:
