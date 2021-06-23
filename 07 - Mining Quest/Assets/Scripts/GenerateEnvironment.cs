@@ -21,6 +21,8 @@ public class GenerateEnvironment : MonoBehaviour
         
         GenerateFloor();
         GenerateRock();
+        GenerateFood();
+        
         SpawnExit();
         SpawnEnemies();
     }
@@ -49,6 +51,26 @@ public class GenerateEnvironment : MonoBehaviour
             GameObject rock = Instantiate(rockTilePrefab, spawnPosition, Quaternion.identity);
             int randomRockSpriteIndex = Random.Range(0, rockSprites.Length);
             rock.GetComponent<SpriteRenderer>().sprite = rockSprites[randomRockSpriteIndex];
+        }
+    }
+
+    private void GenerateFood()
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            int xCoord, yCoord;
+            do
+            {
+                xCoord = Random.Range(0, 20);
+                yCoord = Random.Range(0, 20);
+            } while (hasSprite[xCoord, yCoord]);
+
+            Vector2 spawnPosition = new Vector2(xCoord, yCoord);
+            hasSprite[xCoord, yCoord] = true;
+
+            GameObject food = Instantiate(foodPrefab, spawnPosition, Quaternion.identity);
+            int randomFoodSpriteIndex = Random.Range(0, foodSprites.Length);
+            food.GetComponent<SpriteRenderer>().sprite = foodSprites[randomFoodSpriteIndex];
         }
     }
 
