@@ -13,10 +13,14 @@ public class GenerateEnvironment : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
 
     private int exitLocation;
-    
+    private bool[,] hasSprite = new bool[20, 20];
+
     private void Start()
     {
+        hasSprite[10, 10] = true;
+        
         GenerateFloor();
+        GenerateRock();
         SpawnExit();
         SpawnEnemies();
     }
@@ -26,6 +30,26 @@ public class GenerateEnvironment : MonoBehaviour
         for (int x = 0; x < 20; x++)
             for (int y = 0; y < 20; y++)
                 InstantiateFloorTile(x, y);
+    }
+
+    private void GenerateRock()
+    {
+        for (int i = 0; i < 280; i++)
+        {
+            int xCoord, yCoord;
+            do
+            {
+                xCoord = Random.Range(0, 20);
+                yCoord = Random.Range(0, 20);
+            } while (hasSprite[xCoord, yCoord]);
+
+            Vector2 spawnPosition = new Vector2(xCoord, yCoord);
+            hasSprite[xCoord, yCoord] = true;
+
+            GameObject rock = Instantiate(rockTilePrefab, spawnPosition, Quaternion.identity);
+            int randomRockSpriteIndex = Random.Range(0, rockSprites.Length);
+            rock.GetComponent<SpriteRenderer>().sprite = rockSprites[randomRockSpriteIndex];
+        }
     }
 
     private void InstantiateFloorTile(int x, int y)
