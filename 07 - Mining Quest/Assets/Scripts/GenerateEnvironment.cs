@@ -36,6 +36,7 @@ public class GenerateEnvironment : MonoBehaviour
     private void InstantiateFloorTile(int x, int y)
     {
         GameObject newFloorTile = Instantiate(groundTilePrefab, new Vector2(x, y), Quaternion.identity);
+        newFloorTile.transform.parent = gameObject.transform;
         newFloorTile.GetComponent<SpriteRenderer>().sprite = groundSprites[Random.Range(0, groundSprites.Length)];
     }
 
@@ -49,6 +50,7 @@ public class GenerateEnvironment : MonoBehaviour
         int exitPositionIndex = Random.Range(0, exitPositions.Length);
         hasSprite[(int)exitPositions[exitPositionIndex].x, (int)exitPositions[exitPositionIndex].y] = true;
         GameObject exit = Instantiate(exitPrefab, exitPositions[exitPositionIndex], Quaternion.identity);
+        exit.transform.parent = gameObject.transform;
     }
     
     private void SpawnEnemies()
@@ -66,6 +68,7 @@ public class GenerateEnvironment : MonoBehaviour
             hasSprite[xCoord, yCoord] = true;
             
             GameObject newEnemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            newEnemy.transform.parent = gameObject.transform;
         }
     }
 
@@ -84,6 +87,8 @@ public class GenerateEnvironment : MonoBehaviour
             hasSprite[xCoord, yCoord] = true;
 
             GameObject rock = Instantiate(rockTilePrefab, spawnPosition, Quaternion.identity);
+            rock.transform.parent = gameObject.transform;
+            
             int randomRockSpriteIndex = Random.Range(0, rockSprites.Length);
             rock.GetComponent<SpriteRenderer>().sprite = rockSprites[randomRockSpriteIndex];
         }
@@ -104,6 +109,8 @@ public class GenerateEnvironment : MonoBehaviour
             hasSprite[xCoord, yCoord] = true;
 
             GameObject food = Instantiate(foodPrefab, spawnPosition, Quaternion.identity);
+            food.transform.parent = gameObject.transform;
+            
             int randomFoodSpriteIndex = Random.Range(0, foodSprites.Length);
             food.GetComponent<SpriteRenderer>().sprite = foodSprites[randomFoodSpriteIndex];
         }
