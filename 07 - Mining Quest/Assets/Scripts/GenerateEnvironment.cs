@@ -18,20 +18,55 @@ public class GenerateEnvironment : MonoBehaviour
     private void Start()
     {
         hasSprite[10, 10] = true;
-        
+
         GenerateFloor();
-        GenerateRock();
-        GenerateFood();
-        
         SpawnExit();
         SpawnEnemies();
+        GenerateRock();
+        GenerateFood();
     }
 
     private void GenerateFloor()
     {
         for (int x = 0; x < 20; x++)
-            for (int y = 0; y < 20; y++)
-                InstantiateFloorTile(x, y);
+        for (int y = 0; y < 20; y++)
+            InstantiateFloorTile(x, y);
+    }
+    
+    private void InstantiateFloorTile(int x, int y)
+    {
+        GameObject newFloorTile = Instantiate(groundTilePrefab, new Vector2(x, y), Quaternion.identity);
+        newFloorTile.GetComponent<SpriteRenderer>().sprite = groundSprites[Random.Range(0, groundSprites.Length)];
+    }
+
+    private void SpawnExit()
+    {
+        Vector2[] exitPositions = new[]
+        {
+            new Vector2(0, 0), new Vector2(0, 19), new Vector2(19, 0), new Vector2(19, 19)
+        };
+
+        int exitPositionIndex = Random.Range(0, exitPositions.Length);
+        hasSprite[(int)exitPositions[exitPositionIndex].x, (int)exitPositions[exitPositionIndex].y] = true;
+        GameObject exit = Instantiate(exitPrefab, exitPositions[exitPositionIndex], Quaternion.identity);
+    }
+    
+    private void SpawnEnemies()
+    {
+        for (int i = 0; i < amountOfEnemies; i++)
+        {
+            int xCoord, yCoord;
+            do
+            {
+                xCoord = Random.Range(0, 19);
+                yCoord = Random.Range(0, 19);
+            } while (hasSprite[xCoord, yCoord]);
+
+            Vector2 spawnPosition = new Vector2(xCoord, yCoord);
+            hasSprite[xCoord, yCoord] = true;
+            
+            GameObject newEnemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        }
     }
 
     private void GenerateRock()
@@ -71,26 +106,6 @@ public class GenerateEnvironment : MonoBehaviour
             GameObject food = Instantiate(foodPrefab, spawnPosition, Quaternion.identity);
             int randomFoodSpriteIndex = Random.Range(0, foodSprites.Length);
             food.GetComponent<SpriteRenderer>().sprite = foodSprites[randomFoodSpriteIndex];
-        }
-    }
-
-    private void InstantiateFloorTile(int x, int y)
-    {
-        GameObject newFloorTile = Instantiate(groundTilePrefab, new Vector2(x, y), Quaternion.identity);
-        newFloorTile.GetComponent<SpriteRenderer>().sprite = groundSprites[Random.Range(0, groundSprites.Length)];
-    }
-
-    private void SpawnExit()
-    {
-        // Challenge 2
-    }
-
-    private void SpawnEnemies()
-    {
-        for (int i = 0; i < amountOfEnemies; i++)
-        {
-            Vector2 spawnLocation = new Vector2(Random.Range(0, 19), Random.Range(0, 19));
-            GameObject newEnemy = Instantiate(enemyPrefab, spawnLocation, Quaternion.identity);
         }
     }
 }
