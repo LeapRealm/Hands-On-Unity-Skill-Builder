@@ -2,27 +2,39 @@
 
 public class GenerateEnvironment : MonoBehaviour
 {
+    [SerializeField] private GameObject player;
+
     [SerializeField] private GameObject groundTilePrefab;
     [SerializeField] private GameObject rockTilePrefab;
     [SerializeField] private GameObject foodPrefab;
     [SerializeField] private GameObject exitPrefab;
     [SerializeField] private GameObject enemyPrefab;
-    
+
     [SerializeField] private Sprite[] groundSprites;
     [SerializeField] private Sprite[] rockSprites;
     [SerializeField] private Sprite[] foodSprites;
-    
-    [SerializeField] private int amountOfEnemies;
-    [SerializeField] private int amountOfRocks;
-    [SerializeField] private int amountOfFoods;
+
+    private int amountOfEnemies;
+    private int amountOfRocks;
+    private int amountOfFoods;
 
     private int exitLocation;
-    private bool[,] hasSprite = new bool[20, 20];
-    private Vector2 playerSpawnPoint = new Vector2(10, 10);
+    private int mapSideSize;
+    private bool[,] hasSprite;
+    private Vector2 playerSpawnPoint;
 
     private void Start()
     {
-        hasSprite[10, 10] = true;
+        mapSideSize = Random.Range(15, 41);
+        hasSprite = new bool[mapSideSize, mapSideSize];
+
+        playerSpawnPoint = new Vector2((int) (mapSideSize / 2.0f), (int) (mapSideSize / 2.0f));
+        player.transform.position = playerSpawnPoint;
+        hasSprite[(int) playerSpawnPoint.x, (int) playerSpawnPoint.y] = true;
+
+        amountOfEnemies = (int) (mapSideSize * 0.2f);
+        amountOfRocks = (int) (mapSideSize * 15.0f);
+        amountOfFoods = (int) (mapSideSize * 1.2f);
 
         GenerateFloor();
         SpawnExit();
@@ -33,8 +45,8 @@ public class GenerateEnvironment : MonoBehaviour
 
     private void GenerateFloor()
     {
-        for (int x = 0; x < 20; x++)
-        for (int y = 0; y < 20; y++)
+        for (int x = 0; x < mapSideSize; x++)
+        for (int y = 0; y < mapSideSize; y++)
             InstantiateFloorTile(x, y);
     }
 
@@ -49,7 +61,10 @@ public class GenerateEnvironment : MonoBehaviour
     {
         Vector2[] exitPositions = new[]
         {
-            new Vector2(0, 0), new Vector2(0, 19), new Vector2(19, 0), new Vector2(19, 19)
+            new Vector2(0, 0),
+            new Vector2(0, mapSideSize - 1),
+            new Vector2(mapSideSize - 1, 0),
+            new Vector2(mapSideSize - 1, mapSideSize - 1)
         };
 
         int exitPositionIndex = Random.Range(0, exitPositions.Length);
@@ -65,8 +80,8 @@ public class GenerateEnvironment : MonoBehaviour
             int xCoord, yCoord;
             do
             {
-                xCoord = Random.Range(0, 19);
-                yCoord = Random.Range(0, 19);
+                xCoord = Random.Range(0, mapSideSize);
+                yCoord = Random.Range(0, mapSideSize);
             } while (hasSprite[xCoord, yCoord] || isPlayerSpawnArea(xCoord, yCoord));
 
             Vector2 spawnPosition = new Vector2(xCoord, yCoord);
@@ -79,7 +94,7 @@ public class GenerateEnvironment : MonoBehaviour
 
     private bool isPlayerSpawnArea(int xCoord, int yCoord)
     {
-        if (xCoord >= playerSpawnPoint.x - 1 && xCoord <= playerSpawnPoint.x + 1 && 
+        if (xCoord >= playerSpawnPoint.x - 1 && xCoord <= playerSpawnPoint.x + 1 &&
             yCoord >= playerSpawnPoint.y - 1 && yCoord <= playerSpawnPoint.y + 1)
             return true;
         else
@@ -93,8 +108,8 @@ public class GenerateEnvironment : MonoBehaviour
             int xCoord, yCoord;
             do
             {
-                xCoord = Random.Range(0, 20);
-                yCoord = Random.Range(0, 20);
+                xCoord = Random.Range(0, mapSideSize);
+                yCoord = Random.Range(0, mapSideSize);
             } while (hasSprite[xCoord, yCoord]);
 
             Vector2 spawnPosition = new Vector2(xCoord, yCoord);
@@ -115,8 +130,8 @@ public class GenerateEnvironment : MonoBehaviour
             int xCoord, yCoord;
             do
             {
-                xCoord = Random.Range(0, 20);
-                yCoord = Random.Range(0, 20);
+                xCoord = Random.Range(0, mapSideSize);
+                yCoord = Random.Range(0, mapSideSize);
             } while (hasSprite[xCoord, yCoord]);
 
             Vector2 spawnPosition = new Vector2(xCoord, yCoord);

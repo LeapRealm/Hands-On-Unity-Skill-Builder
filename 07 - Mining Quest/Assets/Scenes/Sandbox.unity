@@ -1482,6 +1482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6338211119bba184eb11ede9593836b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1024029737}
   groundTilePrefab: {fileID: 104131737622608804, guid: a7216eb00a8b9514d87e73943a92bf1c, type: 3}
   rockTilePrefab: {fileID: 104131737622608804, guid: 01462b06d59478a44954e4c795715f84, type: 3}
   foodPrefab: {fileID: 104131737622608804, guid: b290edf39b225614b96e109575d68455, type: 3}
