@@ -1,16 +1,11 @@
-// GameDev.tv Challenge Club. Got questions or want to share your nifty solution?
-// Head over to - http://community.gamedev.tv
-
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreBoard : MonoBehaviour
 {
-    [SerializeField] Text scoreText;
+    [SerializeField] private Text scoreText;
         
-    void Start() 
+    private void Start() 
     {
         // hint: if you get stuck, pay attention to what 
         // Types you're working with. 
@@ -18,5 +13,4 @@ public class ScoreBoard : MonoBehaviour
 
         // also, create a way to increase the score when
         // things get hit
-
 }
