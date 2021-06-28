@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5755980bec5339e41906f47e8dda796a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myLocation: 1
 --- !u!233 &114500643
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -3134,6 +3135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5755980bec5339e41906f47e8dda796a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myLocation: 1
 --- !u!233 &1606046235
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -3446,6 +3448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5755980bec5339e41906f47e8dda796a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myLocation: 2
 --- !u!233 &1659278740
 HingeJoint2D:
   m_ObjectHideFlags: 0
