@@ -828,6 +828,7 @@ GameObject:
   - component: {fileID: 502373636}
   - component: {fileID: 502373635}
   - component: {fileID: 502373639}
+  - component: {fileID: 502373640}
   m_Layer: 0
   m_Name: Round Bumper
   m_TagString: Untagged
@@ -866,8 +867,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -950,6 +951,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cec5fcc40166127418f677d7b6a72427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!250 &502373640
+PointEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502373634}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 8
+  m_ForceMagnitude: 150
+  m_ForceVariation: 10
+  m_DistanceScale: 1
+  m_ForceSource: 0
+  m_ForceTarget: 0
+  m_ForceMode: 0
+  m_Drag: 0
+  m_AngularDrag: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,6 +1270,7 @@ GameObject:
   - component: {fileID: 753556732}
   - component: {fileID: 753556731}
   - component: {fileID: 753556730}
+  - component: {fileID: 753556734}
   m_Layer: 0
   m_Name: Round Bumper (2)
   m_TagString: Untagged
@@ -1313,8 +1335,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -1371,6 +1393,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!250 &753556734
+PointEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753556728}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 8
+  m_ForceMagnitude: 150
+  m_ForceVariation: 10
+  m_DistanceScale: 1
+  m_ForceSource: 0
+  m_ForceTarget: 0
+  m_ForceMode: 0
+  m_Drag: 0
+  m_AngularDrag: 0
 --- !u!1 &781727572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,7 +1721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 823969306}
   - component: {fileID: 823969307}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2480,6 +2522,7 @@ GameObject:
   - component: {fileID: 1089242906}
   - component: {fileID: 1089242905}
   - component: {fileID: 1089242904}
+  - component: {fileID: 1089242908}
   m_Layer: 0
   m_Name: Round Bumper (1)
   m_TagString: Untagged
@@ -2544,8 +2587,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -2602,6 +2645,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!250 &1089242908
+PointEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089242902}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 8
+  m_ForceMagnitude: 150
+  m_ForceVariation: 10
+  m_DistanceScale: 1
+  m_ForceSource: 0
+  m_ForceTarget: 0
+  m_ForceMode: 0
+  m_Drag: 0
+  m_AngularDrag: 0
 --- !u!1 &1110035395
 GameObject:
   m_ObjectHideFlags: 0
@@ -2615,6 +2678,7 @@ GameObject:
   - component: {fileID: 1110035399}
   - component: {fileID: 1110035398}
   - component: {fileID: 1110035397}
+  - component: {fileID: 1110035401}
   m_Layer: 0
   m_Name: Round Bumper (3)
   m_TagString: Untagged
@@ -2679,8 +2743,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -2737,6 +2801,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!250 &1110035401
+PointEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110035395}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 8
+  m_ForceMagnitude: 150
+  m_ForceVariation: 10
+  m_DistanceScale: 1
+  m_ForceSource: 0
+  m_ForceTarget: 0
+  m_ForceMode: 0
+  m_Drag: 0
+  m_AngularDrag: 0
 --- !u!1 &1256592942
 GameObject:
   m_ObjectHideFlags: 0
@@ -2906,7 +2990,7 @@ GameObject:
   - component: {fileID: 1498910641}
   - component: {fileID: 1498910640}
   - component: {fileID: 1498910639}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: The Almighty Ball
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3761,6 +3845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6d9d462cdaa90489bc23a27dd3e7fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beSlow: 0
 --- !u!1 &1707469799
 GameObject:
   m_ObjectHideFlags: 0
