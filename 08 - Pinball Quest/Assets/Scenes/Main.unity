@@ -1076,6 +1076,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e42e1ecf7ef12649a24081e05ad01bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outTransform: {fileID: 1979084419}
+  force: 5
 --- !u!58 &579971597
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1100,8 +1102,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579971595}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.568, y: -4.026, z: 0}
-  m_LocalScale: {x: 0.56155723, y: 0.56155723, z: 0.56155723}
+  m_LocalPosition: {x: 7.58, y: -3.92, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1838185592}
   m_RootOrder: 0
@@ -1136,6 +1138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e42e1ecf7ef12649a24081e05ad01bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outTransform: {fileID: 1979084419}
+  force: 5
 --- !u!58 &581845291
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1160,8 +1164,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581845289}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.1, y: 0.45, z: 0}
-  m_LocalScale: {x: 0.56155723, y: 0.56155723, z: 0.56155723}
+  m_LocalPosition: {x: -9.027, y: 0.802, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1838185592}
   m_RootOrder: 1
@@ -2008,6 +2012,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e42e1ecf7ef12649a24081e05ad01bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outTransform: {fileID: 1979084419}
+  force: 5
 --- !u!58 &920516271
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2032,8 +2038,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920516269}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.22, y: 10.69, z: 0}
-  m_LocalScale: {x: 0.56155723, y: 0.56155723, z: 0.56155723}
+  m_LocalPosition: {x: -3.518, y: 10.343, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1838185592}
   m_RootOrder: 3
@@ -2819,6 +2825,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e42e1ecf7ef12649a24081e05ad01bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outTransform: {fileID: 1979084419}
+  force: 5
 --- !u!58 &1354735751
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2843,8 +2851,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354735749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.12, y: 11.41, z: 0}
-  m_LocalScale: {x: 0.56155723, y: 0.56155723, z: 0.56155723}
+  m_LocalPosition: {x: 6.268, y: 11.794, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1838185592}
   m_RootOrder: 2
@@ -2965,7 +2973,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498910638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.64, y: 12.93, z: 0}
+  m_LocalPosition: {x: 7.23, y: -1.84, z: 0}
   m_LocalScale: {x: 1.2833126, y: 1.2833126, z: 1.2833126}
   m_Children:
   - {fileID: 823969306}
@@ -4363,6 +4371,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1979084419}
+  - component: {fileID: 1979084421}
+  - component: {fileID: 1979084420}
   m_Layer: 0
   m_Name: Teleport Out
   m_TagString: Untagged
@@ -4379,11 +4389,41 @@ Transform:
   m_GameObject: {fileID: 1979084418}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.67, y: 2.68, z: 0}
-  m_LocalScale: {x: 0.56155723, y: 0.56155723, z: 0.56155723}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1838185592}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1979084420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979084418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e42e1ecf7ef12649a24081e05ad01bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outTransform: {fileID: 1979084419}
+  force: 5
+--- !u!58 &1979084421
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979084418}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1001 &184273201624144280
 PrefabInstance:
   m_ObjectHideFlags: 0
