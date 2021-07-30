@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class KillZone : MonoBehaviour
 {
+    [SerializeField] private int lifeLeft;
+    [SerializeField] private Text lifeLeftText;
     [SerializeField] private PolygonCollider2D ballStopperPolygonCollider2D;
     private GameObject player;
     
@@ -13,11 +16,20 @@ public class KillZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (!other.CompareTag("Player"))
+            return;
+
+        if (lifeLeft >= 1)
         {
+            lifeLeft--;
+            lifeLeftText.text = "Life Left\n" + lifeLeft.ToString();
+            
             player.transform.position = new Vector3(9.09f, -10.75f, 0);
             ballStopperPolygonCollider2D.enabled = false;
         }
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
