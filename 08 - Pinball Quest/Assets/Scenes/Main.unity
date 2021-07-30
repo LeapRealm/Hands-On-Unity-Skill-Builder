@@ -193,6 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b8a2b88728cafe458d0630df29c4507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ballStopperPolygonCollider2D: {fileID: 162903878}
 --- !u!1 &114500640
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +397,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &135582511 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 184273201538475904, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
+  m_PrefabInstance: {fileID: 184273201624144280}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &135582516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135582511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7c0b90b17631b4bbf33826b7dcf7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addScore: 500
 --- !u!1 &138416632 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1071552319, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
@@ -412,6 +431,8 @@ GameObject:
   - component: {fileID: 162903877}
   - component: {fileID: 162903876}
   - component: {fileID: 162903878}
+  - component: {fileID: 162903880}
+  - component: {fileID: 162903879}
   m_Layer: 0
   m_Name: Ball Stopper
   m_TagString: Untagged
@@ -521,6 +542,45 @@ PolygonCollider2D:
       - {x: -0.195, y: -0.26999998}
       - {x: 0.375, y: 0.07}
       - {x: 0.445, y: 0.14999999}
+--- !u!61 &162903879
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162903875}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 2}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.89, y: 0.62}
+    newSize: {x: 0.89, y: 0.62}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &162903880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162903875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ff06211462f7b4ba33ca3ad932065a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballStopperPolygonCollider2D: {fileID: 162903878}
 --- !u!1 &362722007
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,6 +930,7 @@ GameObject:
   - component: {fileID: 502373636}
   - component: {fileID: 502373635}
   - component: {fileID: 502373640}
+  - component: {fileID: 502373639}
   m_Layer: 0
   m_Name: Round Bumper
   m_TagString: Untagged
@@ -980,6 +1041,19 @@ Transform:
   m_Father: {fileID: 798102974}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &502373639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502373634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7c0b90b17631b4bbf33826b7dcf7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addScore: 100
 --- !u!250 &502373640
 PointEffector2D:
   m_ObjectHideFlags: 0
@@ -1094,6 +1168,7 @@ GameObject:
   - component: {fileID: 579971598}
   - component: {fileID: 579971597}
   - component: {fileID: 579971596}
+  - component: {fileID: 579971599}
   m_Layer: 0
   m_Name: Teleport In
   m_TagString: Untagged
@@ -1145,6 +1220,19 @@ Transform:
   m_Father: {fileID: 1838185592}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &579971599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579971595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7c0b90b17631b4bbf33826b7dcf7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addScore: 1000
 --- !u!1 &581845289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,6 +1244,7 @@ GameObject:
   - component: {fileID: 581845292}
   - component: {fileID: 581845291}
   - component: {fileID: 581845290}
+  - component: {fileID: 581845293}
   m_Layer: 0
   m_Name: Teleport In (1)
   m_TagString: Untagged
@@ -1207,6 +1296,19 @@ Transform:
   m_Father: {fileID: 1838185592}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &581845293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581845289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7c0b90b17631b4bbf33826b7dcf7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addScore: 1000
 --- !u!1 &711463566
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,6 +1405,7 @@ GameObject:
   - component: {fileID: 753556732}
   - component: {fileID: 753556731}
   - component: {fileID: 753556734}
+  - component: {fileID: 753556730}
   m_Layer: 0
   m_Name: Round Bumper (2)
   m_TagString: Untagged
@@ -1324,6 +1427,19 @@ Transform:
   m_Father: {fileID: 798102974}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &753556730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753556728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7c0b90b17631b4bbf33826b7dcf7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addScore: 100
 --- !u!50 &753556731
 Rigidbody2D:
   serializedVersion: 4
@@ -2019,6 +2135,24 @@ Transform:
   m_Father: {fileID: 1000768617}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &877572894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 184273201538475904, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
+  m_PrefabInstance: {fileID: 1249896983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &877572899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877572894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7c0b90b17631b4bbf33826b7dcf7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addScore: 500
 --- !u!1 &920516269
 GameObject:
   m_ObjectHideFlags: 0
@@ -2030,6 +2164,7 @@ GameObject:
   - component: {fileID: 920516272}
   - component: {fileID: 920516271}
   - component: {fileID: 920516270}
+  - component: {fileID: 920516273}
   m_Layer: 0
   m_Name: Teleport In (3)
   m_TagString: Untagged
@@ -2081,6 +2216,19 @@ Transform:
   m_Father: {fileID: 1838185592}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &920516273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920516269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7c0b90b17631b4bbf33826b7dcf7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addScore: 1000
 --- !u!1 &947783092
 GameObject:
   m_ObjectHideFlags: 0
@@ -2388,6 +2536,7 @@ GameObject:
   - component: {fileID: 1089242906}
   - component: {fileID: 1089242905}
   - component: {fileID: 1089242908}
+  - component: {fileID: 1089242904}
   m_Layer: 0
   m_Name: Round Bumper (1)
   m_TagString: Untagged
@@ -2409,6 +2558,19 @@ Transform:
   m_Father: {fileID: 798102974}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1089242904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089242902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7c0b90b17631b4bbf33826b7dcf7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addScore: 100
 --- !u!50 &1089242905
 Rigidbody2D:
   serializedVersion: 4
@@ -2531,6 +2693,7 @@ GameObject:
   - component: {fileID: 1110035399}
   - component: {fileID: 1110035398}
   - component: {fileID: 1110035401}
+  - component: {fileID: 1110035397}
   m_Layer: 0
   m_Name: Round Bumper (3)
   m_TagString: Untagged
@@ -2552,6 +2715,19 @@ Transform:
   m_Father: {fileID: 798102974}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1110035397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110035395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7c0b90b17631b4bbf33826b7dcf7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addScore: 100
 --- !u!50 &1110035398
 Rigidbody2D:
   serializedVersion: 4
@@ -2668,6 +2844,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 798102974}
     m_Modifications:
+    - target: {fileID: 733191437, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
+      propertyPath: addScore
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 733191437, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
       propertyPath: dirGameObject
       value: 
@@ -2843,6 +3023,7 @@ GameObject:
   - component: {fileID: 1354735752}
   - component: {fileID: 1354735751}
   - component: {fileID: 1354735750}
+  - component: {fileID: 1354735753}
   m_Layer: 0
   m_Name: Teleport In (2)
   m_TagString: Untagged
@@ -2894,6 +3075,19 @@ Transform:
   m_Father: {fileID: 1838185592}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1354735753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354735749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7c0b90b17631b4bbf33826b7dcf7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addScore: 1000
 --- !u!1 &1498910638
 GameObject:
   m_ObjectHideFlags: 0
@@ -3251,11 +3445,11 @@ RectTransform:
   m_Father: {fileID: 447302953}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 932, y: -114}
-  m_SizeDelta: {x: 601.331, y: 164.39795}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -50, y: -50}
+  m_SizeDelta: {x: 601.33105, y: 164.39795}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &1598214724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3279,7 +3473,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 70
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 100
@@ -3289,7 +3483,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 999999999
+  m_Text: '0
+
+'
 --- !u!222 &1598214725
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3787,7 +3983,7 @@ GameObject:
   - component: {fileID: 1670050550}
   - component: {fileID: 1670050551}
   m_Layer: 0
-  m_Name: Score Board
+  m_Name: ScoreManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3801,7 +3997,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670050548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.55, y: 17.34, z: -0.6470761}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3819,7 +4015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb712ce2dd1203041868e0b3b298b1bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 1598214724}
 --- !u!114 &1670050551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4539,6 +4735,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 798102974}
     m_Modifications:
+    - target: {fileID: 733191437, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
+      propertyPath: addScore
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 184273201538475904, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
       propertyPath: m_Name
       value: Flat Bumper Right
