@@ -7,6 +7,13 @@ public class ScoreManager : MonoBehaviour
     private long score = 0;
     public static ScoreManager instance;
 
+    private int multiplier = 1;
+    public int Multiplier
+    {
+        get => multiplier;
+        set => multiplier = value;
+    }
+
     private void Awake()
     {
         if (instance == null)
@@ -17,7 +24,11 @@ public class ScoreManager : MonoBehaviour
 
     public void UpdateScore(int addScore)
     {
-        score += addScore;
-        scoreText.text = "Current Score\n" + score.ToString();
+        score += addScore * Multiplier;
+    }
+
+    private void Update()
+    {
+        scoreText.text = "Current Score\n" + score.ToString() + "\nX" + Multiplier;
     }
 }

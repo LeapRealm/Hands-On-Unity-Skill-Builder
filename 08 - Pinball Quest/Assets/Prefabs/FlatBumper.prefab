@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 6897573078045324236}
   - component: {fileID: 445104463}
   m_Layer: 0
-  m_Name: Flat Bumper
+  m_Name: FlatBumper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
