@@ -913,6 +913,7 @@ GameObject:
   - component: {fileID: 502373639}
   - component: {fileID: 502373642}
   - component: {fileID: 502373641}
+  - component: {fileID: 502373643}
   m_Layer: 0
   m_Name: Round Bumper
   m_TagString: Untagged
@@ -1164,6 +1165,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e0fad228462ce4db58706a50578e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &502373643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502373634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5ba56e5af18b4408d20b0dd5df9014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0.08116722, g: 1, b: 0, a: 1}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,6 +1732,7 @@ GameObject:
   - component: {fileID: 753556730}
   - component: {fileID: 753556736}
   - component: {fileID: 753556735}
+  - component: {fileID: 753556737}
   m_Layer: 0
   m_Name: Round Bumper (2)
   m_TagString: Untagged
@@ -1969,6 +1984,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e0fad228462ce4db58706a50578e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &753556737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753556728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5ba56e5af18b4408d20b0dd5df9014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 1, g: 0.26447567, b: 0, a: 1}
 --- !u!1 &781727572
 GameObject:
   m_ObjectHideFlags: 0
@@ -3132,6 +3160,7 @@ GameObject:
   - component: {fileID: 1089242904}
   - component: {fileID: 1089242910}
   - component: {fileID: 1089242909}
+  - component: {fileID: 1089242911}
   m_Layer: 0
   m_Name: Round Bumper (1)
   m_TagString: Untagged
@@ -3383,6 +3412,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e0fad228462ce4db58706a50578e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1089242911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089242902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5ba56e5af18b4408d20b0dd5df9014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 1, g: 0.9190924, b: 0, a: 1}
 --- !u!1 &1110035395
 GameObject:
   m_ObjectHideFlags: 0
@@ -3399,6 +3441,7 @@ GameObject:
   - component: {fileID: 1110035397}
   - component: {fileID: 1110035403}
   - component: {fileID: 1110035402}
+  - component: {fileID: 1110035404}
   m_Layer: 0
   m_Name: Round Bumper (3)
   m_TagString: Untagged
@@ -3650,6 +3693,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e0fad228462ce4db58706a50578e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1110035404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110035395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5ba56e5af18b4408d20b0dd5df9014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 1, g: 0, b: 0.7879014, a: 1}
 --- !u!1001 &1249896983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3657,6 +3713,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 798102974}
     m_Modifications:
+    - target: {fileID: 445104463, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
+      propertyPath: color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445104463, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
+      propertyPath: color.b
+      value: 0.7582538
+      objectReference: {fileID: 0}
+    - target: {fileID: 445104463, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
+      propertyPath: color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445104463, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
+      propertyPath: color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 184273201538475904, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
       propertyPath: m_Name
       value: Flat Bumper Left
@@ -3664,6 +3736,10 @@ PrefabInstance:
     - target: {fileID: 184273201538475907, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 184273201538475907, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 184273201538475907, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5514,7 +5590,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888193557}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -5752,6 +5828,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 798102974}
     m_Modifications:
+    - target: {fileID: 445104463, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
+      propertyPath: color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 184273201538475904, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
       propertyPath: m_Name
       value: Flat Bumper Right
@@ -5759,10 +5839,6 @@ PrefabInstance:
     - target: {fileID: 184273201538475907, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 184273201538475907, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 184273201538475907, guid: 43a39833941514c46b371646aa9fc8a0, type: 3}
       propertyPath: m_LocalPosition.x
